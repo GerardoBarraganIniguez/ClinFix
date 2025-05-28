@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem 0 0;
+  position: relative;
+}
+
+.header-container-logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-logo {
+  height: 120px;
+}
+
+/* Icono de hamburguesa */
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Ocultamos el input */
+.menu-toggle {
+  display: none;
+}
+
+/* Menu oculto por defecto */
+.menu {
+  position: absolute;
+  top: 85%;        /* respecto al header */
+  left: 0;         /* empieza desde la izquierda del header */
+  width: 100%;
+  background-color: #EEEEEE;
+  border-radius: 0 0 8px 8px;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-list-item {
+  padding: 1rem;
+  border-bottom: #dddddd solid 1px;
+}
+.menu-list-item:active {
+    background-color: #55545486;
+}
+
+.menu-list-item-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* -Si el checkbox está activado, mostramos el menu
+   -Selecciona a los elementos con la clase menu, que sean hermanos de menu-toggle cuando este checkeado. */
+.menu-toggle:checked ~ .menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  z-index: 1;
+}
+
+/* Fondo con animación */
+.hero-background {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  animation: changeBackgroundImage 40s infinite; /*cada imagen dura 8 segundos*/
+  background-size: cover;
+  background-position: center;
+}
+
+/* Texto encima, centrado */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Animación de cambio de fondo */
+@keyframes changeBackgroundImage {
+  0%   { background-image:url('../img/fisio1.jpg'); }
+  20%  { background-image:url('../img/fisio2.jpg'); }
+  40%  { background-image:url('../img/fisio3.jpg'); }
+  60%  { background-image:url('../img/fisio4.jpg'); }
+  80%  { background-image:url('../img/fisio5.jpg'); }
+  100% { background-image:url('../img/fisio1.jpg'); }
+}
