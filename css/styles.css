@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 *,
 ::after,
 ::before {
@@ -7,15 +7,24 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'fuenteArchTH';
+  src: url('../fonts/archTH.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body{
-    font-family: "Roboto", sans-serif;
+    font-family: 'fuenteArchTH', sans-serif;
+    color: white;
+    background-color: #000000e8;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem 0 0;
+  padding-right: 2rem;
   position: relative;
 }
 
@@ -28,6 +37,11 @@ body{
 
 .header-logo {
   height: 120px;
+}
+
+.header-text-logo{
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
 }
 
 /* Icono de hamburguesa */
@@ -83,18 +97,23 @@ body{
   z-index: 1;
 }
 
+.hero{
+  width: 100%;
+}
+
 /* Fondo con animación */
 .hero-background {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 300px;
-  animation: changeBackgroundImage 40s infinite; /*cada imagen dura 8 segundos*/
+  animation: changeBackgroundImage 15s infinite; /*cada imagen dura 8 segundos*/
   background-size: cover;
   background-position: center;
 }
 
 /* Texto encima, centrado */
 .hero-overlay {
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -102,15 +121,28 @@ body{
   color: white;
   text-align: center;
   font-size: 2em;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-family: 'fuenteArchTH', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  
+}
+
+.hero-title{
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.hero-text{
+ 
 }
 
 /* Animación de cambio de fondo */
 @keyframes changeBackgroundImage {
-  0%   { background-image:url('../img/fisio1.jpg'); }
-  20%  { background-image:url('../img/fisio2.jpg'); }
-  40%  { background-image:url('../img/fisio3.jpg'); }
-  60%  { background-image:url('../img/fisio4.jpg'); }
-  80%  { background-image:url('../img/fisio5.jpg'); }
-  100% { background-image:url('../img/fisio1.jpg'); }
+  0%   { background-image:url('../img/fis1.png'); }
+  20%  { background-image:url('../img/fis2.png'); }
+  40%  { background-image:url('../img/fis3.png'); }
+  60%  { background-image:url('../img/fis4.png'); }
+  80% { background-image:url('../img/fis2.png'); } 
+  100% { background-image:url('../img/fis1.png'); } 
 }
