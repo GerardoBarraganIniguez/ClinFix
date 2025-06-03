@@ -90,6 +90,7 @@ body{
 .menu-list-item-link {
   color: inherit;
   text-decoration: none;
+  font-weight: 800;
 }
 
 /* -Si el checkbox está activado, mostramos el menu
