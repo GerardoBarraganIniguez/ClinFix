@@ -80,7 +80,7 @@ body{
   padding: 1rem;
   border-bottom: black solid 1px;
 }
-.menu-list-item:active {
+.menu-list-item:active, .menu-list-item:focus{
     background-color: #b9f56c;
 }
 
