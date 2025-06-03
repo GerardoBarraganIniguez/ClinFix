@@ -61,12 +61,13 @@ body{
   top: 85%;        /* respecto al header */
   left: 0;         /* empieza desde la izquierda del header */
   width: 100%;
-  background-color: #EEEEEE;
+  background-color: white;
   border-radius: 0 0 8px 8px;
   opacity: 0;
   transform: translateY(-10px);
   pointer-events: none;
   transition: opacity .3s ease, transform .3s ease;
+  color: black;
 }
 
 .menu-list {
@@ -77,10 +78,10 @@ body{
 
 .menu-list-item {
   padding: 1rem;
-  border-bottom: #dddddd solid 1px;
+  border-bottom: black solid 1px;
 }
 .menu-list-item:active {
-    background-color: #55545486;
+    background-color: #b9f56c;
 }
 
 .menu-list-item-link {
@@ -133,8 +134,69 @@ body{
   font-weight: 800;
 }
 
-.hero-text{
- 
+/*Boton de citas*/
+.btn-appointment {
+  width: 200px;
+  height: 40px;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 0px 15px;
+  background-color: rgb(66, 66, 66);
+  border-radius: 10px;
+  color: white;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+}
+
+.btn-appointment-bell {
+  width: 13px;
+}
+
+.btn-appointment-path {
+  fill: rgb(0, 206, 62);
+}
+
+.btn-appointment-arrow {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-appointment:hover {
+  background-color: rgb(77, 77, 77);
+  transition-duration: .2s;
+}
+
+.btn-appointment:hover .btn-appointment-arrow {
+  animation: slide-right .6s ease-out both;
+}
+
+.btn-appointment:active {
+  transform: translate(1px , 1px);
+  transition-duration: .2s;
+}
+
+/* arrow animation */
+@keyframes slide-right {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* Animación de cambio de fondo */
