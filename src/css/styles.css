@@ -86,7 +86,9 @@ body{
   border-bottom: black solid 1px;
 }
 /*se agrego focus y hover ya que active por si solo no funcionaba en iphones*/
-.menu-list-item:active, .menu-list-item.link:active{
+.menu-list-item:active,
+.menu-list-item:focus,
+.menu-list-item:hover {
   background-color: #6012f280;
 }
 
