@@ -118,7 +118,7 @@ body{
   position: relative;
   width: 100%;
   height: 300px;
-  animation: changeBackgroundImage 15s infinite; /*cada imagen dura 8 segundos*/
+  animation: changeBackgroundImage 27s infinite; /*cada imagen dura 8 segundos*/
   background-size: cover;
   background-position: center;
 }
@@ -217,7 +217,7 @@ body{
   20%  { background-image:url('../img/fis2.png'); }
   40%  { background-image:url('../img/fis3.png'); }
   60%  { background-image:url('../img/fis4.png'); }
-  80% { background-image:url('../img/fis2.png'); } 
+  80% { background-image:url('../img/fis5.png'); } 
   100% { background-image:url('../img/fis1.png'); } 
 }
 
