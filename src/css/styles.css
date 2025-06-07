@@ -1,4 +1,9 @@
+/* === General === */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+  --main-color: white;
+  --main-background-color: #000000e8;
+}
 *,
 ::after,
 ::before {
@@ -6,20 +11,19 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 @font-face {
   font-family: 'fuenteArchTH';
   src: url('../fonts/archTH.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
-
 body{
     font-family: 'fuenteArchTH', sans-serif;
-    color: white;
-    background-color: #000000e8;
+    color: var(--main-color);
+    background-color: var(--main-background-color);
 }
 
+/* === Header === */
 .header {
   display: flex;
   justify-content: space-between;
@@ -44,7 +48,7 @@ body{
   font-size: 1.5rem;
 }
 
-/* Icono de hamburguesa */
+/* === Menú === */
 .menu-icon {
   font-size: 1.5rem;
   cursor: pointer;
@@ -81,10 +85,11 @@ body{
   padding: 1rem;
   border-bottom: black solid 1px;
 }
+/*se agrego focus y hover ya que active por si solo no funcionaba en iphones*/
 .menu-list-item:active,
 .menu-list-item:focus,
 .menu-list-item:hover {
-    background-color: #b9f56c;
+    /* background-color: #b9f56c; */
 }
 
 .menu-list-item-link {
@@ -102,6 +107,7 @@ body{
   z-index: 1;
 }
 
+/* === Hero === */
 .hero{
   width: 100%;
 }
@@ -138,7 +144,7 @@ body{
   font-weight: 800;
 }
 
-/*Boton de citas*/
+/* === Botón de cita === */
 .btn-appointment {
   width: 200px;
   height: 40px;
@@ -190,6 +196,7 @@ body{
   transition-duration: .2s;
 }
 
+/* === Animaciones === */
 /* arrow animation */
 @keyframes slide-right {
   0% {
@@ -211,4 +218,53 @@ body{
   60%  { background-image:url('../img/fis4.png'); }
   80% { background-image:url('../img/fis2.png'); } 
   100% { background-image:url('../img/fis1.png'); } 
+}
+
+/* === Media Queries === */
+
+@media (width >= 990px ) {
+  .menu-icon {
+    display: none;
+  }
+  .menu {
+    position: static;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    background: transparent;
+    color: inherit;
+    width: auto;
+  }
+  .menu-list {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  
+  .menu-list-item {
+    --glow-color: rgb(176, 215, 255);
+    --glow-spread-color: rgba(123, 207, 255, 0.781);
+    --enhanced-glow-color: rgb(206, 239, 255);
+    --btn-color: rgb(61, 121, 136);
+    display: flex;
+    align-items: center;
+    border: .25em solid var(--glow-color);
+    padding: .7em 1.5em;
+    color: var(--glow-color);
+    font-size: 15px;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+            0 0 4em 1em var(--glow-spread-color),
+            inset 0 0 .75em .25em var(--glow-color);
+    position: relative;
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+  }
+
+  .menu-list-item:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+            0 0 4em 2em var(--glow-spread-color),
+            inset 0 0 .75em .25em var(--glow-color);
+  }
 }
