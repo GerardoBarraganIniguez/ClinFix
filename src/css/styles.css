@@ -157,11 +157,10 @@ body{
   padding: 0px 15px;
   background-color: rgb(66, 66, 66);
   border-radius: 10px;
-  color: white;
+  color: inherit;
   border: none;
   position: relative;
-  cursor: pointer;
-  transition-duration: .2s;
+  
 }
 
 .btn-appointment-bell {
@@ -183,19 +182,6 @@ body{
   justify-content: center;
 }
 
-.btn-appointment:hover {
-  background-color: rgb(77, 77, 77);
-  transition-duration: .2s;
-}
-
-.btn-appointment:hover .btn-appointment-arrow {
-  animation: slide-right .6s ease-out both;
-}
-
-.btn-appointment:active {
-  transform: translate(1px , 1px);
-  transition-duration: .2s;
-}
 
 /* === Animaciones === */
 /* arrow animation */
@@ -272,14 +258,41 @@ body{
             0 0 4em 2em var(--glow-spread-color),
             inset 0 0 .75em .25em var(--glow-color);
   }
-  .btn-appointment {
-    width: 300px;
-    height: 60px;  
-  }
-
   .hero-background {
     height: 600px;
-    /* background-position: 0px 2000px; */
+  }
+
+  .btn-appointment {
+    width: 350px;
+    height: 60px;
+    transition-duration: .2s;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .btn-appointment-bell {
+    width: 25px;
+  }
+
+  .btn-appointment-arrow {
+    /* position: absolute;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2px; */
+  }
+
+  .btn-appointment:hover {
+    background-color: rgb(77, 77, 77);
+    transition-duration: .2s;
+  }
+
+  .btn-appointment:hover .btn-appointment-arrow {
+    animation: slide-right .6s ease-out both;
   }
 
 }
