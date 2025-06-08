@@ -266,24 +266,24 @@ body{
     width: 350px;
     height: 60px;
     transition-duration: .2s;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     cursor: pointer;
   }
 
   .btn-appointment-bell {
-    width: 25px;
+    width: 20px;
   }
 
   .btn-appointment-arrow {
-    /* position: absolute;
+    position: absolute;
     right: 0;
     width: 60px;
     height: 100%;
-    font-size: 36px;
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 2px; */
+    padding-bottom: 2px;
   }
 
   .btn-appointment:hover {
