@@ -2,7 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root{
   --main-color: white;
-  --main-background-color: #000000e8;
+  --main-background-color: black;
+  --glow-color: rgb(176, 215, 255);
+  --glow-spread-color: rgba(123, 207, 255, 0.781);
+  --enhanced-glow-color: rgb(206, 239, 255);
+  --bg-color: rgb(61, 121, 136);
 }
 *,
 ::after,
@@ -182,6 +186,11 @@ body{
   justify-content: center;
 }
 
+.about-physiotherapy {
+  background: linear-gradient(to bottom,rgb(25, 231, 152) 0%, black 100%);
+  padding: 30px;
+}
+
 
 /* === Animaciones === */
 /* arrow animation */
@@ -232,10 +241,6 @@ body{
   }
   
   .menu-list-item {
-    --glow-color: rgb(176, 215, 255);
-    --glow-spread-color: rgba(123, 207, 255, 0.781);
-    --enhanced-glow-color: rgb(206, 239, 255);
-    --bg-color: rgb(61, 121, 136);
     display: flex;
     align-items: center;
     border: .25em solid var(--glow-color);
