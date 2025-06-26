@@ -7,6 +7,7 @@
   --glow-spread-color: rgba(123, 207, 255, 0.781);
   --enhanced-glow-color: rgb(206, 239, 255);
   --bg-color: rgb(61, 121, 136);
+  --bg-about-therapy: rgba(19, 132, 147, 0.794);
 }
 *,
 ::after,
@@ -87,7 +88,7 @@ body{
 .menu-list-item {
   cursor: pointer;
   padding: 1rem;
-  border-bottom: black solid 1px;
+  border-bottom: var(--main-background-color) solid 1px;
 }
 /*se agrego focus y hover ya que active por si solo no funcionaba en iphones*/
 .menu-list-item:active,
@@ -187,10 +188,36 @@ body{
 }
 
 .about-physiotherapy {
-  background: linear-gradient(to bottom,rgb(25, 231, 152) 0%, black 100%);
-  padding: 30px;
+  background: linear-gradient(to bottom,var(--bg-about-therapy) 0%, black 110%);
+  padding: 1.25rem;
 }
 
+.about-physiotherapy p{
+  text-align: center;
+  font-style: italic;
+}
+.about-physiotherapy h2{
+  text-align: center;
+}
+
+.treatment-areas{
+  margin-top: 4rem;
+}
+.treatment-areas div{
+  background-color: var(--main-background-color);
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border-top: 5px solid var(--bg-about-therapy);
+  border-bottom: 5px solid var(--bg-about-therapy);
+  margin-bottom: 7px;
+}
+.treatment-areas-header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* height: 100px; */
+}
 
 /* === Animaciones === */
 /* arrow animation */
