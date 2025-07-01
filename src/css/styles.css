@@ -8,6 +8,7 @@
   --enhanced-glow-color: rgb(206, 239, 255);
   --bg-color: rgb(61, 121, 136);
   --bg-about-therapy: rgba(19, 132, 147, 0.794);
+  --line-color: #1930e0;
 }
 *,
 ::after,
@@ -203,20 +204,40 @@ body{
 .treatment-areas{
   margin-top: 4rem;
 }
-.treatment-areas div{
-  background-color: var(--main-background-color);
-  width: 20px;
-  height: 20px;
-  border-radius: 5px;
-  border-top: 5px solid var(--bg-about-therapy);
-  border-bottom: 5px solid var(--bg-about-therapy);
-  margin-bottom: 7px;
+.treatment-areas article img {
+  width: 100vw;
+  height: 200px;
+  object-fit: cover;
+}
+.treatment-areas article p {
+  padding: 1rem;
 }
 .treatment-areas-header{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  /* height: 100px; */
+}
+.treatment-areas-header img{
+  max-width: 100px;
+}
+.treatment-areas-header h2{
+  margin-left: 0.625rem;
+  font-size: 1rem;
+}
+.lined-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+}
+
+
+.lined-title::before,
+.lined-title::after {
+  content: ""; /* se crea el elemento "linea" */
+  flex: 1; /*se expanden lo maximo posible */
+  height: 2px;
+  background: var(--line-color);
 }
 
 /* === Animaciones === */
